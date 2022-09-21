@@ -4,10 +4,10 @@ const toggleMenuNavigation = (displayState) =>{
     if(displayState === 'block'){
         nav.classList.add('nav__list--active');
         closeBtn.classList.add('nav__list--active');
-        document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+        document.getElementsByTagName('body')[0].style.overflowY = 'hidden';
     }else{
         nav.classList.remove('nav__list--active');
         closeBtn.classList.remove('nav__list--active');
-        document.getElementsByTagName('body')[0].style.overflow = 'scroll';
+        document.getElementsByTagName('body')[0].style.overflowY = 'scroll';
     }
 }
