@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Matt Ridley | Book Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&family=Poppins:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- normalize css -->
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/d1a98e8057.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom Styleshhet -->
+    <link href="./assets/css/styles.css" rel="stylesheet" />
+    <!-- Custom JS -->
+    <script src="./assets/js/main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>
+          <span class="header__title">Matt Ridley</span
+          ><i class="fa-solid fa-paper-plane"></i>
+        </h1>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">About</a>
+            </li>
+            <li class="nav__item"><a href="#" class="nav__link">Books</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <i class="fa-solid fa-bars menu-icon" onclick="toggleMenuNavigation('block')"></i>
+        <i class="fa-solid fa-circle-xmark close-icon" onclick="toggleMenuNavigation('none')"></i>
+      </header>
+      <div class="main">
+        <aside>
+          <div class="book">
+            <div class="book__circle">
+              <img
+                src="./assets/images/book.png"
+                alt="matt ridley book image"
+              />
+            </div>
+          </div>
+        </aside>
+        <main>
+          <h2 class="main__title">
+            Innovation happens when people are free to think,speculate and
+            experiment
+          </h2>
+          <p class="main__description">
+            Ridley's new book, How Innovation Works, chronicles the history of
+            innovation and argues that we need to change the way we think about
+            innovation, to see it as an incremental, bottom-up, fortuitous
+            process that happens to society as a direct result of the human
+            habit of exchange.
+          </p>
+          <div class="buttons">
+            <button class="buttons__buy-now-button">Buy now</button
+            ><button class="buttons__read-more-button">Read more</button>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

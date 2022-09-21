@@ -1,0 +1,219 @@
+:root{
+    --assent-color: #FAD405;
+    --primary-color: #013456;
+}
+*,*::before,*::after{
+    box-sizing:inherit;
+    margin: 0;
+    padding: 0;
+}
+html{
+    box-sizing:border-box;
+    font-size:62.5%;
+}
+body{
+    font-size: 1.6rem;
+}
+.container{
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+}
+.container .header{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: 1fr;
+    align-items: center;
+
+    font-family: 'Istok Web';
+    width: 100%;
+    max-width: 123.1rem;
+    padding-top: 8.1rem;
+    margin: 0 auto;
+}
+.header > h1{
+    display: grid;
+    grid-template-columns: 22.8rem minmax(3.6rem, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+
+    margin: 0;
+}
+.header > h1 .header__title{
+    font: 700 4rem 'Istok Web';
+    color: var(--primary-color);
+    margin-right: 1rem;
+}
+.header .fa-paper-plane{
+    font-size: 3.6rem;
+    color: var(--assent-color);
+}
+.header .nav .nav__list{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.nav .nav__list .nav__item:not(:first-child){
+    margin-left: 2.9rem;
+}
+.nav .nav__list .nav__item .nav__link{
+    font-size: 3.6rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.menu-icon, .close-icon{
+    display: none;
+}
+.main{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    justify-content: center;
+    align-items: center;
+    margin: 4.5rem 0;
+}
+aside .book{
+    height: 78.5rem;
+    position: relative;
+}
+.book .book__circle{
+    width: 78.5rem;
+    height: 78.5rem;
+    background-color: var(--assent-color);
+    border-radius: 50%;
+
+    position: absolute;
+    top: 0;
+    right: 8.4rem;
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+main{
+    max-width: 57.1rem;
+    margin-top: calc(9.1rem - 4.5rem);
+    align-self: start;
+}
+main .main__title{
+    font: 700 4.8rem 'Poppins', sans-serf;
+    color: var(--primary-color);
+}
+main .main__description{
+    font: 275 2rem 'Poppins', sans-serf;
+    margin-top: 1.4rem;
+}
+.buttons{
+    margin-top: 5rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(24.9rem, 1fr));
+    grid-gap: 4.9rem;
+}
+.buttons__buy-now-button, .buttons__read-more-button{
+    font: 700 3.2rem 'Poppins', sans-serf;
+    padding: 1.8rem 3.6rem;
+    border: none;
+    border-radius: 5rem;
+}
+.buttons__buy-now-button{
+    text-transform: uppercase;
+    color: var(--primary-color);
+    background-color: var(--assent-color);
+}
+.buttons__read-more-button{
+    color: #fff;
+    background-color: var(--primary-color);
+}
+@media screen and (max-width: 87.5rem) {
+    .container .header{
+        padding: 2rem 2rem 0;
+    }
+    .header .nav .nav__list{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 7rem);
+        align-items: end;
+
+        width: 100%;
+        height: 100%;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out 0s;
+    }
+    .nav .nav__list .nav__item{
+        margin-left: 0 !important;
+        justify-self: center;
+    }
+    .nav .nav__list .nav__item .nav__link{
+        color: var(--assent-color);
+    }
+    .header .menu-icon{
+        justify-self: end;
+        color: var(--primary-color);
+        line-height: 4.5rem;
+    }
+    .header .fa-solid.close-icon{
+        color: var(--assent-color);
+        position: absolute;
+        top: 3.5rem;
+        right: 3.5rem;
+        transform: translateX(calc(-100vw));
+        transition: transform 0.3s ease-in-out 0s;        
+        z-index: 1;
+    }
+    
+    .header .menu-icon, .header .close-icon{
+        font-size: 3rem;
+        display: block;
+        cursor: pointer;
+    }
+
+    .header .nav .nav__list--active, .header .close-icon.nav__list--active{
+        transform: translateX(0%);
+    }
+    .main{
+        grid-template-columns: 1fr;
+        padding: 0 2rem;
+        margin-top: 0;
+    }
+    .main aside{
+        width: 100%;
+        max-width: 90%;
+        margin: 2rem auto 0px;
+    }
+    aside .book{
+        height: 30rem;
+    }
+    .book .book__circle{
+        position: initial;
+        width: 100%;
+        max-width: 30rem;
+        max-height:30rem;
+        margin: 0 auto;
+    }
+    .book__circle img{
+        width: 15rem;
+    }
+    main{
+        width: 100%;
+        max-width: 123.1rem;
+        justify-self: center;
+    }
+    main .main__title{
+        font-size: 2.6rem
+    }
+    main .main__description{
+        font-size: 1.6rem;
+    }
+    .buttons{
+        grid-template-columns: repeat(2, 20rem);
+        justify-content: space-between;
+    }
+    .buttons__buy-now-button, .buttons__read-more-button{
+        font: 700 1.6rem 'Poppins', sans-serf;
+        padding: 1.6rem 2.5rem;
+    }
+}
